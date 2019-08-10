@@ -1,4 +1,4 @@
-# Program to get mark of students, Store in dictionary
+# Program to get mark of students, Store in dictionary, Sort
 noOfStudents = int(input('Enter number of students - '))
 dictionaryData = {}
 for i in range(0, noOfStudents):
