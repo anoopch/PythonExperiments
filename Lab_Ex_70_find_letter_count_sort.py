@@ -5,7 +5,7 @@ dictionaryData = {}
 for i in range(0, len(text)):
     dictionaryData[text[i]] = text.count(text[i])
 
-print('Normal Dictionary', dictionaryData)
+print('- Dictionary with letter count -\n', dictionaryData)
 
 # getting the values inside dictionary
 values = list(dictionaryData.values())
@@ -30,4 +30,4 @@ newDictionary = {}
 for i in range(0, length):
     newDictionary[keyValues[i]] = values[i]
 
-print('New Sorted Dictionary', newDictionary)
+print('- Sorted Dictionary -\n', newDictionary)
