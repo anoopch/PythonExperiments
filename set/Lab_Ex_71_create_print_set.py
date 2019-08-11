@@ -1,7 +1,7 @@
 # Program to Create a set and print it
 text = 'MISSISSIPPI'
 
-# Finding letter counts
+# Finding letters and adding them to text - Only uniques
 setData = set(text)
 print('- Set -\n', setData)
 
