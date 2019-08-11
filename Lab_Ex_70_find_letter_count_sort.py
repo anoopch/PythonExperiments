@@ -14,12 +14,20 @@ length = len(values)
 
 # Sorting
 temp = []
-newDictionary = {}
 for i in range(0, length):
     for j in range(0, length - i - 1):
         if int(values[j]) > int(values[j + 1]):
-            temp = dictionaryData.get(keyValues[j])
-            dictionaryData[keyValues[j]] = dictionaryData.get(keyValues[j + 1])
-            dictionaryData[keyValues[j + 1]] = temp
+            temp = keyValues[j]
+            keyValues[j] = keyValues[j + 1]
+            keyValues[j + 1] = temp
 
-print('Sorted Dictionary', dictionaryData)
+            temp = values[j]
+            values[j] = values[j + 1]
+            values[j + 1] = temp
+
+# Create a new Dictionary
+newDictionary = {}
+for i in range(0, length):
+    newDictionary[keyValues[i]] = values[i]
+
+print('New Sorted Dictionary', newDictionary)
