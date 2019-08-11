@@ -5,10 +5,11 @@ text1 = '8330844890240113'
 setData = set(text1)
 print('- Initial Set -\n{0}'.format(setData))
 
-numberToRemove = int(input('Enter a Number in the above set to remove - '))
+numberToRemove = str(input('Enter a Number in the above set to remove - '))
 
 if numberToRemove in setData:
     setData.remove(numberToRemove)
+    print('Success - Removed', numberToRemove)
 else:
     print('Sorry!! Entered number {0} is not found in the set.'.format(numberToRemove))
 
