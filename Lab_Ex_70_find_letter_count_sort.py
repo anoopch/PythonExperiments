@@ -13,6 +13,8 @@ keyValues = list(dictionaryData.keys())
 length = len(values)
 
 # Sorting
+temp = []
+newDictionary = {}
 for i in range(0, length):
     for j in range(0, length - i - 1):
         if int(values[j]) > int(values[j + 1]):
