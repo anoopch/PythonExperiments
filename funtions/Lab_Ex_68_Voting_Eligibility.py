@@ -1,4 +1,4 @@
-# Program to square an entered number using Lambda/Anonymous functions
+# Program to check if the entered age is eligible to vote
 def is_eligible_to_vote(age_now):
     return age_now >= 18
 

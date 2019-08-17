@@ -1,4 +1,4 @@
-# Program to square an entered number using Lambda/Anonymous functions
+# Program to find the are and circumference of a circle
 import math
 radius = float(input('Enter the radius of circle - '))
 area = lambda value: 2 * math.pi * radius
