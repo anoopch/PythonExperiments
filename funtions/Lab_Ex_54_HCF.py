@@ -2,7 +2,7 @@
 def hcf(first_number, second_number):
     """This function takes two
     integers as input and returns
-    the calculated Highest Common Factor(HCF)"""
+    the calculated Highest Common Factor(HCF)/Greatest Common Divisor(GCD)"""
     result = 1
     if first_number > second_number:
         smaller = second_number
@@ -17,4 +17,5 @@ def hcf(first_number, second_number):
 
 num1 = int(input("Enter the First number: "))
 num2 = int(input("Enter the Second number: "))
-print("The Highest Common Factor(HCF) of ({0}, {1}) is {2}.".format(num1, num2,  hcf(num1, num2)))
+print("The Highest Common Factor(HCF)/"
+      "Greatest Common Divisor(GCD) of ({0}, {1}) is {2}.".format(num1, num2,  hcf(num1, num2)))
