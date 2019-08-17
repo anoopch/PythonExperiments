@@ -1,4 +1,4 @@
-from module import Lab_Ex_96_LCM_GCD_HCF_Module as Math
+from module import Lab_Ex_96_LCM_GCD_HCF as Math
 
 num1 = int(input("Enter the First number: "))
 num2 = int(input("Enter the Second number: "))
