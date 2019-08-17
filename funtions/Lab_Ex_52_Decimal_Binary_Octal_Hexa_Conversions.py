@@ -1,7 +1,4 @@
-# Program to find if the entered number is divisible by another number
-def division_checker(num, div):
-    return num % div == 0
-
+# Program to Convert among Decimal, Binary, Octal, Hexadecimal using built in functions
 
 print('-------------------- CONVERSION MENU --------------------\n\n',
 
@@ -51,5 +48,7 @@ elif choice == 11:
     value = hex(int(inputData, 8))
 elif choice == 12:
     value = bin(int(inputData, 8))
+else:
+    print('Invalid menu choice')
 
 print("Result = ", value)
