@@ -1,4 +1,4 @@
-# Read two matrices adn perform addition
+# Read two matrices and perform addition
 from numpy_matrix import Module_Matrix_Input as MatBox
 import numpy
 
