@@ -7,8 +7,6 @@ class Addition:
     def add(self):
         """
         This function takes two numbers as input and returns their sum
-        :param num1: the first number
-        :param num2: the second number
         :return: the sum of first and second number
         """
         return self.number01 + self.number02
