@@ -1,5 +1,5 @@
 # Program to read an entire text file
-# Test FIle - /Users/anoop/Downloads/2173 Software engineers and designers.docx
+# Test File - /Users/anoop/Downloads/2173 Software engineers and designers.docx
 import chardet
 
 
