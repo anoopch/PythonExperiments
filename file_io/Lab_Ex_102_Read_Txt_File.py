@@ -1,9 +1,14 @@
 # Program to read an entire text file
+import chardet
+
+
 def read_file(file_path):
     file_pointer = None
     file_data = ''
     try:
-        file_pointer = open(file_path, 'r', 2)
+        file_pointer = open(file_path, 'rb', 2)
+        encoding = chardet.detect(file_pointer.read())
+        print(encoding)
         while True:
             data = file_pointer.read()
             if data is not None and len(data) > 0:
