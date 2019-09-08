@@ -85,3 +85,23 @@ def is_authentication_valid(username, passowrd):
             if data[2] == passowrd:
                 return True
     return False
+
+
+def get_name(username):
+    f = None
+    lines = None
+    username += ','
+    try:
+        f = open(file_name, 'r')
+        lines = f.readlines()
+    except IOError:
+        print('Error')
+    finally:
+        if f is not None:
+            f.close()
+
+    for line in lines:
+        if line.startswith(username):
+            data = line.split(',')
+            return data[1]
+    return None

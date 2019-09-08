@@ -1,19 +1,24 @@
 import tkinter as t
+from tkinter import messagebox
 
-from gui_tkinter.common_module import validate_field, is_data_in_file, is_authentication_valid
+from quotes import Quotes
+from gui_tkinter.common_module import validate_field, is_data_in_file, is_authentication_valid, get_name
 
 
 def perform_login():
     if validate_field([usernameEntry, passwordEntry]):
         if is_data_in_file(usernameEntry.get()):
             if is_authentication_valid(usernameEntry.get(), passwordEntry.get()):
-                print('Valid login')
+                quote = Quotes().random()
+                messagebox.showinfo('Login successful', 'Welcome {0}'.format(get_name(usernameEntry.get()))
+                                    + '\n\nQuote of the Day \n\n\t{0} \n\t\t\t\t- {1}'.format(quote[1], quote[0]))
             else:
-                print('Invalid login credentials')
+                messagebox.showerror('Incorrect Login', 'Invalid login credentials.'
+                                                        '\nPlease enter correct username and password')
         else:
-            print('User not found. Register first')
+            messagebox.showerror('No registered user', 'Sorry No User found with entered username. Register first')
     else:
-        print('Enter all fields')
+        messagebox.showerror('Missing required fields', 'Please Enter all fields and try again')
 
 
 window = t.Tk()
