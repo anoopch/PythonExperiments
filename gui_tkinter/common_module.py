@@ -66,7 +66,7 @@ def insert_into_file(line):
         f.close()
 
 
-def is_authentication_valid(username, passowrd):
+def is_authentication_valid(username, password):
     f = None
     lines = None
     username += ','
@@ -82,7 +82,7 @@ def is_authentication_valid(username, passowrd):
     for line in lines:
         if line.startswith(username):
             data = line.split(',')
-            if data[2] == passowrd:
+            if data[2] == password:
                 return True
     return False
 
