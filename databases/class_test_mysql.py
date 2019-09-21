@@ -35,7 +35,7 @@ sql_query = "INSERT INTO employee (id, name, salary) VALUES (0, %s, %s)"
 my_cursor.executemany(sql_query, val)
 mydb.commit()
 
-my_cursor.execute('SELECT * FROM employee ORDER BY name')
+my_cursor.execute('SELECT * FROM employee WHERE salary > 15000 ORDER BY name')
 records = my_cursor.fetchall()
 if records is not None:
     for employee in records:
