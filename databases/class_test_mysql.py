@@ -33,9 +33,13 @@ val = [
 
 sql_query = "INSERT INTO employee (id, name, salary) VALUES (0, %s, %s)"
 my_cursor.executemany(sql_query, val)
+
+# For CURD operations commit is mandatory
 mydb.commit()
 
-my_cursor.execute('SELECT * FROM employee WHERE salary > 15000 ORDER BY name')
+# ASC DESC
+# AND OR NOT - to combine the different conditions
+my_cursor.execute('SELECT * FROM employee WHERE salary > 15000 ORDER BY name ASC LIMIT 25')
 records = my_cursor.fetchall()
 if records is not None:
     for employee in records:
