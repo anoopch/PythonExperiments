@@ -19,28 +19,33 @@ def is_data_valid(entered_value):
         return False
 
 
+def show_result(text):
+    result_entry.delete(0, len(str(result_entry.get())))
+    result_entry.insert(0, text)
+
+
 def perform_addition():
     if perform_validation():
         first_no, second_no = int(first_number_entry.get()), int(second_number_entry.get())
-        messagebox.showinfo("Result", "Added result = {0}".format(first_no + second_no))
+        show_result(str(first_no + second_no))
 
 
 def perform_subtraction():
     if perform_validation():
         first_no, second_no = int(first_number_entry.get()), int(second_number_entry.get())
-        messagebox.showinfo("Result", "Subtraction result = {0}".format(first_no - second_no))
+        show_result(str(first_no - second_no))
 
 
 def perform_multiplication():
     if perform_validation():
         first_no, second_no = int(first_number_entry.get()), int(second_number_entry.get())
-        messagebox.showinfo("Result", "Multiplication result = {0}".format(first_no * second_no))
+        show_result(str(first_no * second_no))
 
 
 def perform_division():
     if perform_validation():
         first_no, second_no = int(first_number_entry.get()), int(second_number_entry.get())
-        messagebox.showinfo("Result", "Division result = {0}".format(first_no / second_no))
+        show_result(str(first_no / second_no))
 
 
 window = t.Tk()
@@ -66,5 +71,9 @@ registerButton.grid(row=2, column=2)
 
 registerButton = t.Button(window, text="Multiply", command=perform_multiplication)
 registerButton.grid(row=2, column=3)
+
+t.Label(window, text="Result").grid(row=4, column=1)
+result_entry = t.Entry()
+result_entry.grid(row=4, column=2)
 
 window.mainloop()
